@@ -4,8 +4,10 @@ import HeaderTabs from "../components/HeaderTabs";
 
 export default function Home() {
   return (
-    <SafeAreaView>
-      <HeaderTabs />
+    <SafeAreaView style={{ backgroundColor: "#eee" }}>
+      <View>
+        <HeaderTabs />
+      </View>
     </SafeAreaView>
   );
 }
