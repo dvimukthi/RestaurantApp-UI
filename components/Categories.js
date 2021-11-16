@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 
 const items = [
   {
@@ -27,7 +27,11 @@ const items = [
 export default function Categories() {
   return (
     <View>
-      <Text>Categories</Text>
+      <Image
+        source={items[0].image}
+        style={{ width: 50, height: 40, resizeMode: "contain" }}
+      />
+      <Text style={{ fontSize: 13, fontWeight: "900" }}>{items[0].text}</Text>
     </View>
   );
 }
