@@ -24,8 +24,13 @@ export default function Searchbar() {
           },
         }}
         renderLeftButton={() => (
-          <View>
+          <View style={{ marginLeft: 10 }}>
             <Ionicons name="location-sharp" size={24} />
+          </View>
+        )}
+        renderRightButton={() => (
+          <View style={{ flexDirection: "row" }}>
+            <Text>Search </Text>
           </View>
         )}
       />
