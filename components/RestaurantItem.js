@@ -25,9 +25,20 @@ const RestaurantImage = () => (
   </>
 );
 const RestaurantInfo = () => (
-  <View>
-    <Text>Farmhouse Kitchen Thai Cuisine</Text>
-    <Text>30-40 * min</Text>
+  <View
+    style={{
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginTop: 10,
+    }}
+  >
+    <View>
+      <Text style={{ fontSize: 15, fontWeight: "bold " }}>
+        Farmhouse Kitchen Thai Cuisine
+      </Text>
+      <Text>30-40 * min</Text>
+    </View>
     <Text>4.5</Text>
   </View>
 );
