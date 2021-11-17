@@ -35,19 +35,24 @@ const localRestaurants = [
 export default function RestaurantItem() {
   return (
     <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
-      <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
-        <RestaurantImage />
-        <RestaurantInfo />
-      </View>
+      {localRestaurants.map((restaurant, index) => (
+        <View
+          key={index}
+          style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}
+        >
+          <RestaurantImage image={restaurant.image_url} />
+          <RestaurantInfo name={restaurant.name} rating={restaurant.rating} />
+        </View>
+      ))}
     </TouchableOpacity>
   );
 }
 
-const RestaurantImage = () => (
+const RestaurantImage = (props) => (
   <>
     <Image
       source={{
-        uri: "https://www.esquiresg.com/wp-content/uploads/2018/05/best-restaurants-world-main-esquire-singapore-1280x720.jpg",
+        uri: props.image,
       }}
       style={{ width: "100%", height: 180 }}
     />
@@ -56,7 +61,7 @@ const RestaurantImage = () => (
     </TouchableOpacity>
   </>
 );
-const RestaurantInfo = () => (
+const RestaurantInfo = (props) => (
   <View
     style={{
       flexDirection: "row",
@@ -66,9 +71,7 @@ const RestaurantInfo = () => (
     }}
   >
     <View>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>
-        Farmhouse Kitchen Thai Cuisine
-      </Text>
+      <Text style={{ fontSize: 15, fontWeight: "bold" }}>{props.name}</Text>
       <Text style={{ fontSize: 13, color: "gray" }}>30-40 * min</Text>
     </View>
     <View
@@ -81,7 +84,7 @@ const RestaurantInfo = () => (
         borderRadius: 15,
       }}
     >
-      <Text>4.5</Text>
+      <Text>{props.rating}</Text>
     </View>
   </View>
 );
