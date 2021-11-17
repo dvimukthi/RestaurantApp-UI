@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  TextPropTypes,
-} from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-const localRestaurants = [
+export const localRestaurants = [
   {
     name: "Beachside Bar",
     image_url:
