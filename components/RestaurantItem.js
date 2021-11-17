@@ -2,6 +2,36 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+const localRestaurants = [
+  {
+    name: "Beachside Bar",
+    image_url:
+      "http://cdn.cnn.com/cnnnext/dam/assets/130605154832-beach-bars.jpg",
+    categories: ["Cafe", "Bar"],
+    price: "$$",
+    reviews: 1244,
+    rating: 4.5,
+  },
+  {
+    name: "Benihana",
+    image_url:
+      "https://www.oldmonterey.org/sites/default/files/styles/max_size/public/uploads/users/1732/images/benihana_2_0.jpg?itok=VRKmZsZQ",
+    categories: ["Cafe", "Bar"],
+    price: "$$",
+    reviews: 1244,
+    rating: 3.7,
+  },
+  {
+    name: "India's Grill",
+    image_url:
+      "http://indiarestaurant.com/wp-content/uploads/2019/04/AU_1710010_India__5591_SM-1.jpg",
+    categories: ["Indian", "Bar"],
+    price: "$$",
+    reviews: 700,
+    rating: 4.9,
+  },
+];
+
 export default function RestaurantItem() {
   return (
     <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
