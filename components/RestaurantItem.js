@@ -4,10 +4,12 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 export default function RestaurantItem() {
   return (
-    <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
-      <RestaurantImage />
-      <RestaurantInfo />
-    </View>
+    <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
+      <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
+        <RestaurantImage />
+        <RestaurantInfo />
+      </View>
+    </TouchableOpacity>
   );
 }
 
