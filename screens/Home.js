@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import Categories from "../components/Categories";
 import HeaderTabs from "../components/HeaderTabs";
@@ -27,6 +27,11 @@ export default function Home() {
       .then((res) => res.json())
       .then((json) => setRestaurantData(json.businesses));
   };
+
+  useEffect(() => {
+    getRestaurantsFromYelp();
+  }, []);
+
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
