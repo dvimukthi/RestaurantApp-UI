@@ -7,7 +7,8 @@ import RestaurantItems, {
 } from "../components/RestaurantItems";
 import Searchbar from "../components/Searchbar";
 
-const YELP_API_KEY = "";
+const YELP_API_KEY =
+  "eAGRfRUiIit08jLNh8dNwq5bVVUmsO4nJCVhrJmkdel71yu388IpCAuvjd6CCOsqVWBNL-Qy7mM7cAPeikbigQaXQwec78s_wugzcGoFv12prvlj743MEbENfp6WYXYx";
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
