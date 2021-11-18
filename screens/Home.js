@@ -16,14 +16,17 @@ export default function Home() {
   const getRestaurantsFromYelp = () => {
     const yelpUrl =
       "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego";
-  };
 
-  const apiOptions = {
-    headers: {
-      Authorization: `Bearer ${YELP_API_KEY}`,
-    },
-  };
+    const apiOptions = {
+      headers: {
+        Authorization: `Bearer ${YELP_API_KEY}`,
+      },
+    };
 
+    return fetch(yelpUrl, apiOptions)
+      .then((res) => res.json())
+      .then((json) => setRestaurantData(json.businesses));
+  };
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
