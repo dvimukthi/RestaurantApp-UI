@@ -12,6 +12,12 @@ const YELP_API_KEY =
 
 export default function Home() {
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
+
+  const getRestaurantsFromYelp = () => {
+    const yelpUrl =
+      "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego";
+  };
+
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
