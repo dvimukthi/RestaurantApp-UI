@@ -18,6 +18,12 @@ export default function Home() {
       "https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego";
   };
 
+  const apiOptions = {
+    headers: {
+      Authorization: `Bearer ${YELP_API_KEY}`,
+    },
+  };
+
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
