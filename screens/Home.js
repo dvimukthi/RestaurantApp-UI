@@ -30,7 +30,7 @@ export default function Home() {
 
   useEffect(() => {
     getRestaurantsFromYelp();
-  }, []);
+  }, [city]);
 
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
