@@ -37,12 +37,12 @@ export default function Home() {
 
   useEffect(() => {
     getRestaurantsFromYelp();
-  }, [city]);
+  }, [city, activeTab]);
 
   return (
     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
-        <HeaderTabs />
+        <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <Searchbar cityHandler={setCity} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
